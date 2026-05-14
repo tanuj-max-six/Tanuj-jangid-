@@ -56,7 +56,7 @@ export const EndlessGallery = () => {
   );
 };
 
-const GalleryItem = ({ src }: { src: string }) => {
+const GalleryItem = ({ src }: { src: string; key?: string | number }) => {
   return (
     <motion.div
       whileHover={{ scale: 0.95 }}

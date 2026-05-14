@@ -18,24 +18,17 @@ export const EnquiryForm = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/enquiry", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
-      }
+      // For static deployments like GitHub Pages, we use a mailto link
+      // since the Node.js backend (server.ts) won't run there.
+      const subject = encodeURIComponent("New Enquiry from Website");
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+      window.location.href = `mailto:tjguru4u@gmail.com?subject=${subject}&body=${body}`;
+      
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       setStatus("error");
-      setErrorMessage("Network error. Please check your connection.");
+      setErrorMessage("Something went wrong. Please try again.");
     }
   };
 

@@ -40,7 +40,7 @@ export const MouseTextEffect = ({ text, className = "" }: Props) => {
   );
 };
 
-const Character = ({ char, mouseX, mouseY }: { char: string, mouseX: any, mouseY: any }) => {
+const Character = ({ char, mouseX, mouseY }: { char: string, mouseX: any, mouseY: any, key?: string | number }) => {
   const charRef = useRef<HTMLSpanElement>(null);
   const scale = useMotionValue(1);
   const springConfig = { damping: 25, stiffness: 400 };

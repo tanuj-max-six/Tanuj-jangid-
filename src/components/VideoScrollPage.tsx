@@ -35,7 +35,7 @@ export const VideoScrollPage = () => {
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
         <video 
           ref={videoRef}
-          src="/scene-1.mp4" 
+          src={`${import.meta.env.BASE_URL}scene-1.mp4`}
           muted 
           playsInline
           preload="auto"

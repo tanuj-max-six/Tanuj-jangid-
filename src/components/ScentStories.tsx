@@ -70,7 +70,7 @@ export const ScentStories = () => {
   );
 };
 
-const StorySection = ({ story, index }: { story: any; index: number }) => {
+const StorySection = ({ story, index }: { story: any; index: number; key?: number | string }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,

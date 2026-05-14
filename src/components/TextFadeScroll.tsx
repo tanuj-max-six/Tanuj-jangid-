@@ -45,6 +45,7 @@ interface WordProps {
   children: ReactNode;
   progress: any;
   range: [number, number];
+  key?: string | number;
 }
 
 const Word = ({ children, progress, range }: WordProps) => {

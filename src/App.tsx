@@ -11,7 +11,6 @@ import { BrandIntro } from "./components/BrandIntro";
 import { ScrollReveal } from "./components/ScrollReveal";
 import { TextFadeScroll } from "./components/TextFadeScroll";
 import { DepthGallery } from "./components/DepthGallery";
-import { FragranceCard } from "./components/FragranceCard";
 import { SectionHeader } from "./components/SectionHeader";
 import { Footer } from "./components/Footer";
 import { CustomCursor } from "./components/CustomCursor";
